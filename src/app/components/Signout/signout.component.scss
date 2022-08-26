@@ -1,0 +1,47 @@
+.card-container {
+  min-height: 312px;
+  padding-top: 56px;
+  margin-bottom: 318px;
+  form {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+
+.cardTitle {
+  margin: 24px 0 24px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+}
+.title {
+  padding-top: 25px;
+  font-size: 20px;
+  font-family: Noto Sans;
+  font-weight: bold;
+}
+.sign-out-info {
+  margin: 28px 0 40px;
+}
+
+.sign-in-button-area {
+  width: 362px;
+  margin: auto;
+  .agt-btn{
+    display: block;
+    border: 1px solid #E1E3E5;
+    color: #384350;
+    background: #FAFAFA;
+    margin-top: 40px;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: center;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}

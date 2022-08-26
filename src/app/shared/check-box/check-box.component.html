@@ -1,0 +1,12 @@
+<div
+  class="check-box-cntnr"
+  (click)="toggleCheck()"
+  [ngClass]="{ 'has-unslected': showError }"
+  (keyup)="spaceKeyup($event)"
+  tabindex="0"
+>
+  <input class="checkbox1-style" type="checkbox" />
+  <fa-icon *ngIf="checked" icon="check" class="icon-style"></fa-icon> 
+</div>
+
+

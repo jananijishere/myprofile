@@ -1,0 +1,13 @@
+<div id="page-content" *ngIf="showApp">
+        <app-header></app-header>
+        <div class="agt-container">
+                <router-outlet></router-outlet>
+                <div class="overlay-modal validation-overlay" *ngIf='publicService.showLoader'>
+                        <div class="loading-spinner">
+                                <img src="assets/images/spinner_med_48x48.gif">
+                                <p [translate]="'COMMON.RESPONSE_MESSAGE'"></p>
+                        </div>
+                </div>
+        </div>
+        <app-footer></app-footer>
+</div>

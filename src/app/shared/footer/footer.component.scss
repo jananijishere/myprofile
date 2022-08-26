@@ -1,0 +1,67 @@
+@import '../../../variables.scss';
+.agtFooterBlue {
+  width: 100%;
+  height: 11px;
+  // background-color: $fiveBlue;
+}
+.agt-footer-container {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  width: 100%;
+  height: 83px;
+  background-color: $footerBgColor;
+  overflow: auto;
+  z-index: 99;
+}
+.agt-footer {
+  width: 100%;
+  margin: 0 auto;
+}
+.legal {
+  color: $footer-txt-clr;
+  font-size: 11px;
+  line-height: 17px;
+  width: 100%;
+  text-align: center;
+  margin: 3px 0 40px;
+  p {
+    height: 17px;
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+}
+.legal a {
+  font-size: 11px;
+  font-weight: normal;
+}
+.ise-phone {
+  color: #000000;
+  text-decoration: none;
+}
+.vertical-line {
+  margin: 0 8px;
+}
+.br-isShow {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .agt-footer-container {
+    height: 209px;
+  }
+  .legal {
+    p {
+      height: auto;
+      margin-bottom: 18px;
+    }
+  }
+  .ise-phone {
+    color: $fiveBlue;
+  }
+  .is-show {
+    display: none;
+  }
+  .br-isShow {
+    display: block;
+  }
+}

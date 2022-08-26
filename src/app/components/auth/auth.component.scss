@@ -1,0 +1,621 @@
+@import "../../../variables.scss";
+.card-container {
+  padding-top: 56px;
+  margin-bottom: 118px;
+  min-height: 597px;
+  height: auto;
+  color:#231F20;
+  max-width: 777px;
+  border: 1px solid #BBBDBF;
+ .auth-page-title {
+    color: #147EC2;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  form {
+    width: 312px;
+    margin: 0 auto;
+    input{
+      filter: none !important;
+    }
+  }
+}
+.whyLine{
+    color:#147EC2 ;
+    font-size: 14px;
+    line-height: 14px;
+    margin: 12px 0 9px;
+}
+.reCode:hover{
+    // text-decoration:underline
+    cursor:pointer;
+}
+.whyLine:hover{
+    text-decoration:underline;
+    cursor:pointer;
+
+}
+.text-center{
+    text-align: center;
+    letter-spacing: 0px;
+    color: #394451;
+   font-size: 21px;
+   line-height: 21px;
+   width: 80%;
+   margin: auto;
+}
+.text-center-small{
+    text-align: center;
+    letter-spacing: 0px;
+    color: #394451;
+   font-size: 21px;
+   line-height: 21px;
+   width: 68%;
+   margin: auto;
+}
+.mediu{
+margin-top: 35px;
+&.email-text {
+    margin-top: 6px;
+}
+&.account-verify {
+    margin-top: 43px; 
+}
+}
+.email{
+    line-height: 24px;
+    font-size: 14px;
+    color: #231F20;
+    font-family: "Noto Sans Bold";
+    margin-top: 15px;
+}
+// -----
+.agt-login-info {
+  margin: 43px 0 35px;
+  text-align: center;
+  p {
+    margin-bottom: 0px;
+    color: #394451;
+  }
+}
+.agt-login-info .email-color {
+    color: #231F20; 
+    margin-top: 22px;
+    font-size: 24px;
+    line-height: 33px;
+}
+.codeGroup{
+    width: 64%;
+    margin:auto;
+  
+}
+.btnBack{
+   width: 91%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   position: absolute;
+   bottom: 41px;
+}
+.btnGroup{
+    float: right;
+}
+.btn{
+    margin-left: 20px;
+    color: #fff;
+    padding:10px 20px;
+
+}
+.btn:hover{
+    // text-decoration:underline
+    cursor:pointer;
+}
+.disable{
+    background: #D0D2D3 0% 0% no-repeat padding-box;
+}
+.able{
+    background: #147EC2 0% 0% no-repeat padding-box;
+}
+.blue{
+    color: #147EC2;
+}
+.fs14{
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 55px;
+    margin-bottom: 10px;
+}
+.top{
+    margin-top: 56px;
+}
+.second{
+    margin-top: 20px;
+}
+.error-top{
+    margin-top: 15px;
+}
+.error-color{
+    color:#394451
+}
+.error-app{
+    margin-top: 22px;
+    margin-bottom: 27px;
+}
+.input-control{
+    // margin-bottom: 15px;
+    padding: 0 30px;
+    letter-spacing: 30px;
+    font-size: 30px;
+    font-weight: 800;
+    height: 54px;
+    border: 0.5px solid #90A4B4;
+    border-radius: 0;
+    // -moz-text-align-last: justify;
+    // text-align-last: justify;
+    // text-align: center;
+    &.code-size {
+        line-height: 43.2px;
+        font-size: 36px;
+        height: 53px;
+        width: 100%;
+        line-height: 43.2px;
+        font-family: "Noto Sans Bold";
+        max-width: 462px;
+        letter-spacing: 46px;
+        padding: 0 0 0 48px;
+    }
+}
+
+.error-cell{
+    width: 76.4%;
+    margin: 11px auto auto auto;
+    color: #EC1C24;
+    background: #FAF1F1 0% 0% no-repeat padding-box;
+    border: 3px solid #EC1C24;
+    opacity: 1;  
+    padding: 12px 75px;
+    // height: 95px;
+    text-align: center;
+     &.error-message {
+        font-size: 18px;
+        line-height: 1.8em;
+    }
+}
+.error-cell .text-bold {
+    font-weight: bold;
+}
+.reCode{
+    font-size: 18px;
+    line-height: 18px;
+    color: #147EC2;
+    text-align: center;
+    letter-spacing: 0px;
+}
+.agt-login-info-lock{
+    margin-top: 96px;
+}
+.resend-success {
+    margin: 15px 0px 10px;
+    color: #008522;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+  }
+@media screen and (max-width: 580px) {
+    .input-control{
+        padding: 0px 29px;
+    letter-spacing:15px;
+    font-size: 23px;
+    font-weight: 800;
+    height: 40px;
+    border: 0.5px solid #90A4B4;
+    border-radius: 0;
+    text-align: center;
+    }
+    .page-title{
+        font-size: 29px;
+    }
+  .login-error-info,
+  .agt-login-info {
+    p {
+      font-size: 11px;
+    }
+  }
+}
+.page-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 50%;
+    margin-left: -150px;
+    font-family: "Seravek Light";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    color: #eee;
+    overflow: auto;
+    border-radius: 3px;
+    padding: 50px 0;
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    overflow-y: hidden;
+    background: linear-gradient(#00815a, #008120);
+    box-shadow: 0 2px 0 rgba(175, 175, 175, 0.12);
+}
+
+.pd-container {
+    padding: 10px 30px;
+}
+.error-bold{
+    font-family: "Noto Sans Bold";
+}
+
+.bg-green-lighter {
+    background: linear-gradient(#339a7b, #339a3d);
+}
+.loading{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-top:100px;
+            position: relative;
+            // border:5px solid lightgreen;
+            -webkit-animation: turn 2s linear infinite;
+        }
+        // .loading span{
+        //     display: inline-block;
+        //     width: 30px;
+        //     height: 30px;
+        //     border-radius: 50%;
+        //     border:5px solid lightgreen;
+        //     position: absolute;
+        //     left: 50%;
+        //     margin-top: -15px;
+        //     margin-left: -15px;
+        //     -webkit-animation: changeBgColor 2s linear infinite;
+        // }
+        @-webkit-keyframes changeBgColor{
+            0%{
+                background: red;
+            }
+            100%{
+                background: blue;
+            }
+        }
+        @-webkit-keyframes turn{
+            0%{
+                -webkit-transform: rotate(0deg);
+                border-color: red;
+            }
+            100%{
+                -webkit-transform: rotate(360deg);
+                border-color: blue;
+            }
+        }
+
+@media only screen and (max-width: 600px) {
+    .page-container {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 20px 0;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-height: 736px) {
+    .page-container {
+        padding: 120px 0;
+    }
+}
+
+/* checked-codes */
+.checked-codes {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.checked-codes .flex {
+    justify-content: space-between;
+}
+
+.checked-codes a {
+    float: right;
+    font-size: 13px;
+    color: #000000;
+    text-decoration: underline;
+    line-height: 13px
+}
+
+.checked-codes input {
+    box-sizing: border-box;
+    height: 40px;
+    max-width: 40px;
+    border: solid 1px #eee;
+    border-radius: 4px;
+    margin: 0 2px;
+    flex: 1;
+    font-size: 18px;
+    text-align: center;
+    background-color: transparent;
+    color: #eee;
+}
+
+
+.con-message {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+button {
+    padding: 6px 0;
+    margin: 10px 0;
+}
+
+.code-tip {
+    font-size: 14px;
+}
+
+.code-container:active {
+    -moz-box-shadow: 0px 7px 20px #333333;
+    -webkit-box-shadow: 0px 7px 20px #333333;
+    box-shadow: 0px 7px 20px #333333;
+}
+
+.flex {
+    display: flex;
+}
+.resend-code {
+    // width: 55%;
+    margin: 0 30px;
+}
+.resend-code .btnGroup {
+    padding-top:20px;
+    float: none;
+    text-align: right;
+}
+.resend-code .btn {
+    padding: 15px 25px;
+    display: inline-block;
+}
+.agt-login-info .protect-account {
+    font-size: 21px;
+    line-height: 20px;
+}
+.agt-login-info .protect-code {
+    margin-top: 54px;
+    font-size: 21px;
+    line-height: 20px;
+}
+.card-container.verify{
+    padding-top: 55px;
+}
+.card-container.auth{
+    padding-top: 52px;
+    .agt-login-info{
+        margin: 45px 0 35px;
+        .margin-top-code{
+            margin-top: 0px;
+        }
+    }
+    .agt-login-info.margin-top-info{
+        margin-top: 21px;
+    }
+    .codeGroup .whyLine.margin-top-whyLine{
+        margin: 13px 0 10px; 
+    }
+}
+.card-container.lock{
+    padding-top: 53px;
+}
+.agt-verify-accnt{
+    .title-container{
+        height: 36px;
+    }
+    .agt-login-info{
+    padding: 92px 70px 2px 91px;
+    margin: 0;
+    }
+    .agt-login-info .text-center{
+    width: 100%;
+    line-height: 30px;
+    }
+    .agt-login-info .text-center-small{
+    width: 100%;
+    line-height: 35px;
+    }
+   }
+   .agt-verify-accnt.btnBack .btn{
+    padding:13px 31px;
+   }
+   .top-line-space{
+    margin-top:40px;
+   }
+   .agt-login-info.margin-top-info,
+   .agt-login-info .margin-top-code{
+    margin-top: 23px;
+   }
+   .agt-login-info .margin-top-email {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 22px;
+}
+.codeGroup .margin-top-whyLine{
+    margin-top: 18px;
+}
+.agt-accnt-lock{
+    .title-container{
+        height: 36px;
+    }
+    .agt-login-info-lock{
+        padding: 90px 23% 0 26%;
+        margin: 0;
+    }
+    .text-center{
+        width: 100%;
+    }
+    .text-center.middle{
+        line-height: 30px;
+    }
+    .top-line-space{
+        margin-top:50px;
+    }
+    .error-mail p{
+        padding-left: 24px;
+    }
+    .error-top{
+        margin-top:26px;
+    }
+}
+/* Added for RWD */
+@media screen and (max-width: 767px) {
+    .agt-login-info .protect-account{
+        font-size: 16px;
+      }
+    .agt-login-info .protect-code {
+      margin-top: 48px;
+      font-size: 16px;
+    }
+  .agt-login-info .email-color {
+      margin-top: 22px;
+      font-size: 20px;
+    }
+  .codeGroup {
+      width: 80%;
+      margin: auto;
+  }
+  .fs14 {
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+  }
+  .input-control.code-size{
+      line-height: 43.2px;
+      font-size: 33px;
+      height: 53px;
+      width: 100%;
+  }
+  .whyLine {
+      font-size: 12px;
+      // line-height: 14px;
+      margin-top: 10px;
+  }
+  .reCode {
+      font-size: 16px;
+      // line-height: 18px;
+      // text-align: center;
+      // letter-spacing: 0;
+  }
+  .text-center {
+      font-size: 18px;
+      }
+  .error-cell {
+          padding: 10px 15px;
+      }
+      .error-cell.error-message {
+          font-size: 14px;
+          line-height: normal; 
+      }
+      .codeGroup .margin-top-whyLine {
+          margin-top: 10px;
+      }
+      .agt-verify-accnt .agt-login-info {
+          padding: 45px;
+      }    
+      .agt-verify-accnt .agt-login-info .text-center {
+         line-height: 25px;
+      }
+      .agt-verify-accnt .agt-login-info .text-center-small {
+          line-height: 25px;
+      }
+      .agt-verify-accnt .agt-login-info .text-center {
+          line-height: 25px;
+      }
+      .agt-accnt-lock .agt-login-info-lock {
+          padding: 45px;
+      }
+      .resend-success {
+        margin: 12px 0px 10px;
+        font-size: 13px;
+      }
+    }
+@media only screen and (device-width : 375px) and (device-height : 812px) {
+    .agt-login-info .protect-account{
+      font-size: 16px;
+    }
+  .agt-login-info .protect-code {
+    margin-top: 48px;
+    font-size: 16px;
+  }
+.agt-login-info .email-color {
+    margin-top: 22px;
+    font-size: 20px;
+  }
+.codeGroup {
+    width: 80%;
+    margin: auto;
+}
+.fs14 {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.input-control.code-size{
+    line-height: 43.2px;
+    font-size: 33px;
+    height: 53px;
+    width: 100%;
+}
+.whyLine {
+    font-size: 12px;
+    // line-height: 14px;
+    margin-top: 10px;
+}
+.reCode {
+    font-size: 16px;
+    // line-height: 18px;
+    // text-align: center;
+    // letter-spacing: 0;
+}
+.text-center {
+    font-size: 18px;
+    }
+.error-cell {
+        padding: 10px 15px;
+    }
+    .error-cell.error-message {
+        font-size: 14px;
+        line-height: normal; 
+    }
+    .codeGroup .margin-top-whyLine {
+        margin-top: 10px;
+    }
+    .agt-verify-accnt .agt-login-info {
+        padding: 45px;
+    }    
+    .agt-verify-accnt .agt-login-info .text-center {
+       line-height: 25px;
+    }
+    .agt-verify-accnt .agt-login-info .text-center-small {
+        line-height: 25px;
+    }
+    .agt-verify-accnt .agt-login-info .text-center {
+        line-height: 25px;
+    }
+    .agt-accnt-lock .agt-login-info-lock {
+        padding: 45px;
+    }
+    .resend-success {
+        margin: 12px 0px 10px;
+        font-size: 13px;
+      }
+}

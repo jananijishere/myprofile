@@ -1,0 +1,149 @@
+@import "../../../variables.scss";
+.card-container {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 56px;
+  margin-bottom: 118px;
+  height: auto;
+  height: 379px;
+  form {
+    width: 362px;
+    margin: 17px auto 0px;
+  }
+  &.access-container {
+    height: 255px;
+    padding-top: 56px 0px;
+    .agt-noaccess-info {
+      margin: 24px 0px 0px 0px;
+      p:first-of-type {
+        margin-bottom: 21px;
+      }
+    }
+  }
+}
+.control-label {
+  border: 0px;
+}
+.agt-noaccess-info {
+  //margin: 30px 0 29px;
+  text-align: center;
+  p {
+    margin-bottom: 0;
+  }
+  &.error-msg {
+    height: auto;
+    margin: 28px 0 32px;
+  }
+}
+.mb-4 {
+  margin-bottom: 20px !important;
+}
+.text-center {
+  font-size: 14px !important;
+}
+.warning-box {
+  position: relative;
+  //min-height: 48px;
+  margin: 0 auto;
+  margin-top: 14px;
+  //width: 362px;
+  min-height: 40px;
+  padding: 15px 31px;
+  border: 2px solid $warningBorderColor;
+  background: $warnig-bg-clr;
+  //border-radius: px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  font-size: 14px;
+  color: $warningBorderColor;
+  filter: none !important;
+  -webkit-appearance: none;
+  .agt-noaccess-info {
+    p {
+      color: $errormsg;
+    }
+  }
+}
+.agt-noaccess-info {
+  p {
+    margin: 0px 0px 0px;
+  }
+}
+input:disabled {
+  background-color: #f7f7f7;
+  -webkit-text-fill-color: #343740;
+  -webkit-opacity: 1;
+  opacity: 1;
+  color: #343740;
+}
+.control-label {
+  background-color: #ffffff;
+  -webkit-text-fill-color: #343740;
+  opacity: 1;
+  -webkit-opacity: 1;
+  color: #343740;
+}
+.error-style {
+  display: block;
+  position: relative;
+  top: -8px;
+  padding: 0;
+}
+.japan-css {
+  margin-top: -10px;
+}
+.spanish-css {
+  position: relative;
+  bottom: 10px;
+}
+.german-css {
+  position: relative;
+  bottom: 10px;
+}
+.franch-css {
+  position: relative;
+  bottom: 10px;
+}
+.portugus-css {
+  position: relative;
+  bottom: 10px;
+}
+.contactSupportURL {
+  color: #d6001c;
+}
+@media screen and (max-width: 318px) {
+  .warning-box {
+    width: 90%;
+    height: auto;
+  }
+  .card-container form {
+    width: 90%;
+  }
+}
+/* Added for RWD */
+@media only screen and (device-width: 375px) and (device-height: 812px) {
+  .warning-box {
+    width: 90%;
+    padding: 10px 10px;
+  }
+  .card-container form {
+    width: 90%;
+  }
+  .agt-btn {
+    width: 100%;
+  }
+  .warning-box .agt-noaccess-info {
+    p:not(:last-child) {
+      margin-top: 0px;
+    }
+  }
+  .agt-noaccess-info {
+    p:not(:last-child) {
+      margin-top: 30px;
+    }
+  }
+}
+.warning-sr , .warning-clc {
+  margin-top: 45px;
+}

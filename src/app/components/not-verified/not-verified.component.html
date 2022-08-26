@@ -1,0 +1,22 @@
+<div class="card-container" [ngClass]="{'notverified-container': requested}">
+    <div>
+        <h3 class="page-title">{{'LOGIN.NOT_VERIFIED' | translate}}</h3>
+
+        <div class="warning-box">
+            <div class="agt-notverified-info">
+                <p class="text-center">
+                    {{'LOGIN.NOT_VERFIED_EMAIL' | translate}}&nbsp;{{'LOGIN.NOT_VERFIED_EMAIL1' | translate}}</p>
+            </div>
+        </div>
+        <form [formGroup]="formModel">
+            <div class="agt-email"> {{eId}}</div>
+            <div class="msg-success">
+                <p  *ngIf="sentSuccessfully">{{'LOGIN.SUCCESS_MESSAGE' | translate}}</p>
+            </div>
+            <div>
+                <button class="btn agt-btn" [ngClass]="{'resend-button-area': sentSuccessfully}" type="submit"
+                    (click)="resendEmail()">{{'LOGIN.NOT_VERIFIED_RESEND_EMAIL' | translate}}</button>
+            </div>
+        </form>
+    </div>
+</div>

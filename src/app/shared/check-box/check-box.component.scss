@@ -1,0 +1,44 @@
+@import "../../../variables.scss";
+.check-box-cntnr {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  border: 2px solid #c1c6c8;
+  background: #ffffff;
+  padding: 4px;
+  margin: 5px 13px auto auto;
+  .checkbox1-style {
+    visibility: hidden;
+  }
+  &.has-unslected {
+    border: 2px solid $errormsg;
+  }
+  &.selected {
+    border: 2px solid #384350;
+  }
+  &:focus {
+    outline: none;
+  }
+  .icon-style {
+    position: absolute;
+    left: 0.5px;
+    font-size: 10px;
+    color: #0085d5;
+    height: 16px;
+    width: 16px;
+    top: -2.1px;
+    transform: rotate(-6deg);
+  }
+}
+@-moz-document url-prefix() {
+  .check-box-cntnr {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    border: 2px solid #c1c6c8;
+    background: #ffffff;
+    padding: 4px;
+    margin: 5px 13px auto auto;
+    top: 18px;
+  }
+}

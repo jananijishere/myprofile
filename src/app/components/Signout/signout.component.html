@@ -1,0 +1,11 @@
+<div class="card-container" *ngIf="showSignout">
+    <h3 class="page-title">{{'SIGN_OUT.CARD_TITLE' | translate}}</h3>
+    <div class="sign-out-info">
+        <p class="cardTitle">{{'SIGN_OUT.SIGNED_OUT' | translate}}</p>
+        <p class="cardTitle">{{'SIGN_OUT.THANK_YOU' | translate}}</p>
+    </div>
+    <div class="sign-in-button-area">
+        <a class="btn agt-btn" *ngIf='!publicService.appInfo?.adfsInternal' routerLink="/" [queryParams]="paramsObject">{{'SIGN_OUT.SIGN_IN' | translate}}</a>
+        <a class="btn agt-btn" *ngIf='publicService.appInfo?.adfsInternal' href="{{ publicService.appInfo?.redirectURI }}">{{'SIGN_OUT.SIGN_IN' | translate}}</a>
+    </div>
+</div>

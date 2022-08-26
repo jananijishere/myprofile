@@ -1,0 +1,97 @@
+<div class="card-container" [ngClass]="{'verify' : reasonPageFlag=='reason', 'auth' : reasonPageFlag=='auth', 'lock' : reasonPageFlag=='lock'}">
+
+
+    <div *ngIf="reasonPageFlag=='auth'">
+        <div>
+            <!-- 开头 -->
+            <h3 class="page-title auth-page-title">{{'LOGIN.SIGNIN' | translate}}</h3>
+            <!-- loading -->
+            <div *ngIf='loadingFlag'>
+                <div class="text-center mediu account-verify">{{ 'MFA.VERIFY_IDENTITY' | translate }}</div>
+                <div class="loading">
+                    <!-- <span></span> -->
+                    <img src="assets/images/loading.png" style="width:80px;height:80px;" />
+                </div>
+            </div>
+            <div *ngIf='!loadingFlag'>
+                <!-- 报错 -->
+                <!-- <div class="error-cell error-message" *ngIf='errorFlag'>{{this.errorMessage}}</div> -->
+                <div class="error-cell error-message" *ngIf='errorFlag'>
+                    <span
+                        *ngIf="errorMoreAttempts">{{this.errorMoreAttempts1}}
+                        <span class="text-bold">{{this.errorMoreAttempts2}}</span>
+                        <span>{{this.errorMoreAttempts3}}</span>
+                    </span>
+                    <span *ngIf="!errorMoreAttempts">{{this.errorMessage}}</span>
+                </div>
+                <div class="agt-login-info" [ngClass]="{ 'margin-top-info': errorFlag }">
+                    <p class="text-center protect-account" *ngIf='!errorFlag'>{{ 'MFA.VERIFY_TO_PROTECT' | translate }}
+                    </p>
+                    <p class="text-center error-top protect-code" [ngClass]="{ 'margin-top-code': errorFlag }"> {{'MFA.CODE_SENT' |translate}}</p>
+                    <p class="text-center email error-top email-color" [ngClass]="{ 'margin-top-email': errorFlag }">{{email}} </p>
+                </div>
+            </div>  
+        </div>
+        <div *ngIf='!loadingFlag'>
+            <div style="" class="codeGroup">
+                <p class="text-center error-app error-color" *ngIf='errorFlag'>{{'MFA.PLEASE_ENTER'| translate}}    </p>
+                <div class="fs14" *ngIf='!errorFlag' > {{'MFA.CODE'| translate}}</div>
+                <!-- input -->
+                <input class="input-control code-size" (keyup.enter)="subCode()" maxlength="6" [(ngModel)]="authCode" type="text">
+                <p (click)='reasonPage()' style="" class="whyLine" [ngClass]="{ 'margin-top-whyLine': errorFlag }">{{'MFA.WHY_VERIFICATION' | translate}}</p>
+            
+            <div class="resend-code">
+                <!-- 按钮 -->
+                <div class="btnGroup " >
+                    <span (click)='sendCode()' class="reCode">{{'MFA.RESEND_CODE' | translate}}</span>
+                    <span class="btn"
+                        [ngStyle]="{'background-color':authCode != ''? (authCode.length==6 ? '#147EC2':'#D0D2D3') : '#D0D2D3' }"
+                        (click)='subCode()'>{{'MFA.VERIFY' | translate}}</span>
+                </div>
+            </div>
+            <p *ngIf="resendSuccess" class="resend-success">{{'MFA.RESEND_SUCCESS' | translate}}</p>
+        </div>
+        </div>
+        <!-- <p *ngIf="resendSuccess" class="resend-success">{{'MFA.RESEND_SUCCESS' | translate}}</p> -->
+    </div>
+    <div *ngIf="reasonPageFlag=='reason'">
+        <div class="agt-verify-accnt">
+            <!-- 开头 -->
+            <div class="title-container">
+            <h3 class="page-title">{{'MFA.VERIFYING_ACCOUNT' | translate}}</h3>
+            </div>
+            
+            <div class="agt-login-info">
+            <p class="text-center">{{'MFA.PROTECT_SAFETY' | translate}}</p>
+            <p class="text-center-small second">{{'MFA.DEVICE_FINGERPRINT' | translate}}</p>
+            <div class="top-line-space">
+            <p class="text-center mediu"> {{'MFA.PLEASE_CONTACT' | translate}}</p>
+            <!-- <p class="text-center mediu email-text" style="color:#147EC2 ;">{{publicService.appInfo?.mfaSupportEmail}}</p> -->
+            </div>
+            </div>
+            <p class="text-center mediu email-text" style="color:#147EC2 ;"><a style="color:#147EC2 ;" href="mailto:{{publicService.appInfo?.mfaSupportEmail || mfaSupportMailId}}">{{publicService.appInfo?.mfaSupportEmail || mfaSupportMailId}}</a></p>
+            
+            </div>
+            
+            <div class="agt-verify-accnt btnBack">
+            <span class="btn able" (click)='back()'>{{'MFA.BACK' | translate}}</span>
+            </div>
+    </div>
+    <div *ngIf="reasonPageFlag=='lock'" class="agt-accnt-lock">
+        <div class="itle-container">
+            <h3 class="page-title auth-page-title">{{'MFA.ACCOUNT_LOCKED' | translate}}</h3>
+        </div>
+        <div class="agt-login-info-lock">
+            <p class="text-center">{{'MFA.INVALID_CODE' | translate}}</p>
+            <p class="text-center second"> {{'MFA.ACCOUNT_LOCKED_SECURITY' | translate}}</p>
+            <div class="top-line-space">
+                <p class="text-center  mediu"> {{'MFA.HELP_CONTACT' | translate}}</p>
+            </div>
+        </div>
+        <div class="error-mail">
+            <p class="text-center error-top blue">
+                <a class="blue" href="mailto:{{publicService.appInfo?.mfaSupportEmail || mfaSupportMailId}}">{{publicService.appInfo?.mfaSupportEmail || mfaSupportMailId}}</a>
+            </p>
+        </div>
+    </div>
+</div>

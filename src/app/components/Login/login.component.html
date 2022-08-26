@@ -1,0 +1,136 @@
+<!-- <div class="card-container" *ngIf="!registeredNotConfirmed || showLogin" [ngClass]="{ 'main-card-cntnr': !showCreateAccount }">
+   -->
+<div class="card-container login" *ngIf="!registeredNotConfirmed && showLogin && !showloginLink">
+  <div>
+    <h3 class="page-title" *ngIf="!isLgt">{{ 'LOGIN.SIGNIN' | translate }}</h3>
+    <h3 class="page-title" *ngIf="isLgt">{{ 'LOGIN.SIGNOUT' | translate }}</h3>
+    <div *ngIf="!loginFailed && !accountLocked && !isLgt && !isRp && !isExistingUser" class="agt-login-info">
+      <!-- Commenting out bwlow haeding text as per CIAM-2006-->
+      <!-- <p class="text-center">
+        {{ 'LOGIN.ACCOUNT' | translate }} -->
+        <!-- &nbsp;—&nbsp; -->
+        <!-- <a href="{{publicService.appInfo?.learnMoreURL}}" target="_blank" rel="noopener noreferrer">
+                    {{'LOGIN.LEARN' | translate}}
+                </a> -->
+      <!-- </p> -->
+      <!-- <p class="text-center">{{'LOGIN.INCLUDING' | translate}} {{publicService.appInfo?.appName}}&nbsp;—&nbsp;<a -->
+      <p class="text-center"></p>
+    </div>
+    <!-- <div *ngIf="loginFailed" class="warning-box" [ngClass]="{'resent-msg':showloginLink,'succss-resend':sentResendSuccessfully}"> -->
+    <div *ngIf="loginFailed" class="warning-box">
+      <div class="login-error-info">
+        <p [ngClass]="{'german-css-warning-box':deLocale, 'italy-css-warning-box':itLocale,'franch-css-warning-box':frLocale, 'spain-css-warning-box':esLocale,'japan-css-warning-box':jaLocale,'portugal-css-warning-box':ptLocale,'korea-css-warning-box':koLocale,'china-css-warning-box':zhLocale}">{{ 'LOGIN.NOT_SIGN' | translate }}</p>
+        <!-- <a *ngIf="showloginLink" class="showLink" (click)="resendEmail()" >{{'CONFIRM_ACCOUNT.RESEND_EMAIL' | translate}}</a> -->
+      </div>
+    </div>
+    <!-- <span *ngIf="sentResendSuccessfully && loginFailed" class="resend-msg-success" [ngClass]="{'german-css':deLocale, 'italy-css':itLocale,'franch-css':frLocale, 'spain-css':esLocale,'japan-css':jaLocale,'portugal-css':ptLocale}">{{'CONFIRM_ACCOUNT.SUCCESS_MESSAGE' | translate}}</span> -->
+    <div *ngIf="isExistingUser" class="warning-box success-box existing-user">
+      <div class="login-error-info success-msg">
+        <p>{{ 'LOGIN.EXISTING_USER_1' | translate }}</p>
+        <p>{{ 'LOGIN.EXISTING_USER_2' | translate }}</p>
+    </div>
+    </div>
+    <div *ngIf="accountLocked" class="warning-box">
+      <div class="login-error-info">
+        <p [ngClass]="{ 'delocale-class': deLocale }">{{ 'LOGIN.LOCKED' | translate }}</p>
+        <p [ngClass]="{ 'delocale-class': deLocale }">{{ 'LOGIN.LOCKED_1' | translate }}</p>
+      </div>
+    </div>
+    <div *ngIf="isLgt" class="warning-box">
+      <div class="login-error-info">
+        <p>{{ 'LOGIN.EXPIRED' | translate }}</p>
+      </div>
+    </div>
+    <div *ngIf="isRp" class="warning-box success-box">
+      <div class="login-error-info expired-info success-msg-pwd">
+        <p>{{publicService?.appInfo?.messages?.success?.resetPassword}}</p>
+    </div>
+    </div>
+    <form [formGroup]="formModel" [ngClass]="{'existing-user':isExistingUser}">
+      <!-- for email-->
+      <!-- <div class="mb-4" *ngIf="!isUserName" [ngClass]="{showError: showErrorInfo}">
+        <label class="control-label" for="username">{{'LOGIN.EMAIL_LABEL' | translate}}</label>
+        <div>
+            <input class="input-control" type="text" formControlName="username" id="username"
+                pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+                required (blur)="validateUser()">
+        </div>
+        <p class="form-error-msg error-style"
+            *ngIf="fieldData('username').errors?.required && fieldData('username').touched"
+            [translate]="'COMMON.LABEL_REQUIRED'"></p>
+        <p class="form-error-msg error-style"
+            *ngIf="fieldData('username').errors?.pattern && !fieldData('username').errors?.required"
+            [translate]="'COMMON.FIELD_REQUIRED_VALIDATION_2'">
+        </p>
+    </div> -->
+      <!-- for username and email   -->
+      <div class="mb-4" [ngClass]="{ showError: showErrorInfo }">
+        <label class="control-label" for="username">{{
+          'LOGIN.EMAIL_USERNAME_LABEL' | translate
+        }}</label>
+        <div>
+          <!-- <input class="input-control" type="text" formControlName="username" id="username"
+            pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+            required (blur)="validateUser()" /> -->
+          <input class="input-control" type="text" formControlName="username" id="username" required
+            (blur)="validateUser()" (ngModelChange)="removeRememberMe()" />
+        </div>
+        <p class="form-error-msg error-style" *ngIf="
+            (fieldData('username').errors?.required &&
+              fieldData('username').touched) 
+          " [translate]="'COMMON.LABEL_REQUIRED'"></p>
+        <p class="form-error-msg error-style" *ngIf="
+            fieldData('username').errors?.pattern &&
+            !fieldData('username').errors?.required
+          " [translate]="'COMMON.FIELD_REQUIRED_VALIDATION_2'"></p>
+      </div>
+
+      <div class="mb-4" *ngIf="externalUser" [ngClass]="{ showError: showErrorInfo }">
+        <label class="control-label" for="password">{{
+          'LOGIN.PASSWORD_LABEL' | translate
+        }}</label>
+        <input id="password" class="input-control password" type="password" formControlName="password"
+          appTogglePasswordField required />
+        <span (click)="showPassword()">
+          <fa-icon icon="eye-slash" class="pwd-hide eye-slash" [ngClass]="{ passwordShow: passwordShow }"></fa-icon>
+          <fa-icon icon="eye" class="pwd-hide" [ngClass]="{ passwordShow: !passwordShow }"></fa-icon>
+        </span>
+        <p class="form-error-msg error-style" *ngIf="
+            fieldData('password').errors?.required &&
+            fieldData('password').touched
+          " [translate]="'COMMON.LABEL_REQUIRED'"></p>
+      </div>
+      <div class="forgot-pass" *ngIf="externalUser">
+        <a routerLink="/forgot-password" [queryParams]="paramsObject">{{
+          'LOGIN.FORGOT' | translate
+        }}</a>
+      </div>
+      <div [ngClass]="{moveRememberMe: !externalUser}">
+        <app-check-box formControlName="rememberMe" (change)="rememberMeOption($event)" class="checkbox-remember-me"></app-check-box>
+        <p class="text-remember-me">{{ 'LOGIN.REMEMBER_ME' | translate }}</p>
+      </div>
+      <div class="button-align">
+        <button class="btn agt-btn" type="submit" (click)="authenticateUserDetails()"
+          [disabled]="accountLocked ? true : false" [ngClass]="{ loading: loading }">
+          {{ 'LOGIN.SIGNIN' | translate }}
+        </button>
+      </div>
+    </form>
+    <div class="card-footer" *ngIf='showCreateAccount'>
+      <a class="btn btn-create-acc"
+        href="{{ publicService.appInfo?.createAccountURL }}{{isMYA? '' : queryparams }}" (click)="createAccount()">{{ 'LOGIN.CREATE_ACCOUNT' | translate }}</a>
+    </div>
+  </div>
+</div>
+<div class="card-container card-container-email-verification" *ngIf="showloginLink">  
+  <div >
+    <h2 class="page-title" [ngClass]="{'spain-heading': esLocale}">{{ 'LOGIN.VERIFICATION_TITLE' | translate }}</h2>  
+    <h2 class="page-title france-text" *ngIf="frLocale">{{ 'LOGIN.VERIFICATION_TITLE_1' | translate }}</h2>      
+    <p class=" text-center text-center-firstline">{{ 'LOGIN.VERIFICATION_LINE_1' | translate }}<span> {{ emailIdMasked }}</span></p>           
+    <p class="text-center text-center-thirdline" [ngClass]="{'german-text': deLocale}">{{ 'LOGIN.VERIFICATION_LINE_2' | translate }}</p>
+  </div>
+</div>
+
+<not-verified *ngIf="registeredNotConfirmed" [aId]="aId" [eId]="eId" [paramObj]="queryparams"></not-verified>
+
+

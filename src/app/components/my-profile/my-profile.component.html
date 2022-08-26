@@ -1,0 +1,245 @@
+<div class="main-container" *ngIf="showProfile">
+ 
+  <div class="nav-bar">
+    <app-myaccount-navbar></app-myaccount-navbar>
+  </div>
+<div 
+  class="wrapper-container profile-container"
+>
+  <div class="profile-title-section">
+    <span class="profile" >{{ 'LOGIN.PROFILE' | translate }}</span>
+  </div>
+    <ng-container *ngIf="showProfileDefaultPage; else showProfileEditPage">
+      <span class="vertical-line-edit"></span>
+      <span class="profile-edit-icon" (click)="editBtnClicked()">
+        <i class="fa fa-pencil"></i>
+       <span>  {{ 'LOGIN.EDIT' | translate }} </span>
+      </span>
+      <div class="default-profile-section">
+        <i class="fa-solid fa-pen"></i>
+        <p class="profile-label">{{ 'LOGIN.FIRSTNAME' | translate }}</p>
+        <p class="profile-label-value">{{profileDetail.firstName}}</p>
+        <p class="horizontal-line"></p>
+      </div>
+      <div class="default-profile-section">
+        <p class="profile-label">{{ 'LOGIN.LASTNAME' | translate }}</p>
+        <p class="profile-label-value">{{profileDetail.lastName}}</p>
+        <p class="horizontal-line"></p>
+      </div>
+      <div class="default-profile-section">
+        <p class="profile-label">{{ 'LOGIN.PHONENUMBER' | translate }}</p>
+        <p class="profile-label-value">{{profileDetail.phoneNumber}}</p>
+        <p class="horizontal-line"></p>
+      </div>
+      <div class="default-profile-section">
+        <p class="profile-label">{{ 'LOGIN.EMAIL' | translate }}</p>
+        <p class="profile-label-value">{{ profileDetail.email }}</p>
+        <p class="horizontal-line"></p>
+      </div>
+      <div class="default-profile-section">
+        <p class="profile-label">
+          {{ 'LOGIN.COMPANY' | translate }}
+        </p>
+        <p class="profile-label-value">
+        {{profileDetail.company}}
+        </p>
+        <p class="horizontal-line last-h-line"></p>
+      </div>
+      <div class="default-profile-section">
+        <p class="profile-label">
+          {{ 'LOGIN.COUNTRY' | translate }}
+        </p>
+        <p class="profile-label-value">
+        {{profileDetail.country}}
+        </p>
+        <p class="horizontal-line last-h-line"></p>
+      </div>
+      <div class="default-profile-section">
+        <p class="profile-label">
+          {{ 'LOGIN.ACCOUNTCREATIONDATE' | translate }}
+        </p>
+        <p class="profile-label-value">
+          {{profileDetail.accountCreationDate}}
+        </p>
+        <p class="horizontal-line last-h-line"></p>
+      </div>
+    </ng-container>
+
+    <ng-template #showProfileEditPage>
+      <div class="back" (click)="showDefaultProfile()">
+        <i class="fa fa-chevron-left left-arrow"></i>
+        <span>{{ 'LOGIN.BACK' | translate }}</span>
+      </div>
+      <form [formGroup]="addprofileDetailsForm">
+        <!-- <div class="common-input">
+          <label class="select-label">{{ 'LOGIN.FIRSTNAME' | translate }}</label>
+          <input
+        class="input-control"
+        type="text"
+        formControlName="firstName"
+        id="firstname"
+        required
+       
+      />
+     
+        </div> -->
+        <p
+          class="common-input"
+        >
+          <app-textbox-control
+            [label]= "profileTranslate.firstName"
+            [placeholder]="''"
+            formControlName="firstName"
+            [isDisabled]="false"
+            
+          >
+          </app-textbox-control>
+        </p>
+        <!-- <div class="common-input">
+          <label class="select-label">{{ 'LOGIN.LASTNAME' | translate }}</label>
+          <input
+        class="input-control"
+        type="text"
+        formControlName="lastName"
+        id="lastname"
+        required
+     
+      />
+        </div> -->
+        <p
+          class="common-input"
+        >
+          <app-textbox-control
+            [label]= "profileTranslate.lastName"
+            [placeholder]="''"
+            formControlName="lastName"
+            [isDisabled]="false"
+            
+          >
+          </app-textbox-control>
+        </p>
+        <!-- <div class="common-input">
+          <label class="select-label">{{ 'LOGIN.PHONENUMBER' | translate }}</label>
+          <input
+        class="input-control"
+        type="text"
+        formControlName="phoneNumber"
+        id="phoneNumber"
+       
+      />
+        </div> -->
+        <p
+        class="common-input"
+      >
+        <app-textbox-control
+          [label]= "profileTranslate.phoneNumber"
+          [placeholder]="''"
+          formControlName="phoneNumber"
+          [isDisabled]="false"
+          
+        >
+        </app-textbox-control>
+      </p>
+        <!-- <div class="common-input">
+          <label class="select-label">{{ 'LOGIN.EMAIL' | translate }}</label>
+          <input
+        class="input-control"
+        type="text"
+        formControlName="email"
+        id="email"
+        disabled
+        
+      />
+      <p class="test-messgae">{{ 'LOGIN.EMAILHELPTEXT' | translate }}</p>
+        </div> -->
+        <p class="common-input-optional hint-field disabled-field">
+          <app-textbox-control
+            [label]="profileTranslate.email"
+            formControlName="email"
+            [isDisabled]="true"
+            [hint]="profileTranslate.emailHint"
+        
+          >
+          </app-textbox-control>
+        </p>
+        <!-- <div class="common-input">
+          <label class="select-label"> {{ 'LOGIN.COMPANY' | translate }}</label>
+          <input
+        class="input-control"
+        type="text"
+        formControlName="company"
+        id="company"
+        disabled
+      />
+      <p class="test-messgae">{{ 'LOGIN.COMPANYHELPTEXT' | translate }}</p>
+        </div> -->
+        <p class="common-input-optional hint-field disabled-field">
+          <app-textbox-control
+            [label]="profileTranslate.company"
+            formControlName="company"
+            [isDisabled]="true"
+            [hint]="profileTranslate.companyHint"
+          >
+          </app-textbox-control>
+        </p>
+        <!-- <div class="common-input">
+          <label class="select-label">{{ 'LOGIN.COUNTRY' | translate }}</label>
+          <input
+        class="input-control"
+        type="text"
+        formControlName="country"
+        id="country"
+        disabled
+      />
+      <p class="test-messgae">{{ 'LOGIN.COUNTRYHELPTEXT' | translate }}</p>
+        </div> -->
+        <p class="common-input-optional hint-field disabled-field">
+          <app-textbox-control
+            [label]="profileTranslate.country"
+            formControlName="country"
+            [isDisabled]="true"
+            [hint]="profileTranslate.countryHint" 
+          >
+          </app-textbox-control>
+        </p>
+        <!-- <div class="common-input">
+          <label class="select-label">{{ 'LOGIN.ACCOUNTCREATIONDATE' | translate }}</label>
+          <input
+        class="input-control"
+        type="text"
+        formControlName="accountCreationDate"
+        id="accountCreationDate"
+        disabled
+      />
+      <p class="test-messgae">{{ 'LOGIN.ACCOUNTCREATIONDATEHELPTEXT' | translate }}</p>
+        </div> -->
+        <p class="common-input-optional hint-field disabled-field">
+          <app-textbox-control
+            [label]="profileTranslate.accountCreationDate"
+            formControlName="accountCreationDate"
+            [isDisabled]="true"
+            [hint]="profileTranslate.accountCreationDateHint"
+          >
+          </app-textbox-control>
+        </p>
+        <div class="example-button-row">
+          <button
+            class="cancel"
+            (click)="showDefaultProfile()"
+          >
+          {{ 'LOGIN.CANCEL' | translate }}
+          </button>
+          <button
+            [disabled]="addprofileDetailsForm.invalid"
+            class="save-changes"
+            [ngClass]="{ 'save-btn-api': saveBtnForAPICall }"
+          >
+            <span *ngIf="saveBtnForAPICall" class="loader"></span>
+            <span [ngClass]="{ 'save-btn-api-text': saveBtnForAPICall }" (click)="saveChanges()">{{ 'LOGIN.SAVECHANGES' | translate }}</span>
+          </button>
+        </div>
+      </form>
+    </ng-template>
+ 
+</div>
+</div>

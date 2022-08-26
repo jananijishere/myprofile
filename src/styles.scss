@@ -1,0 +1,519 @@
+/* Global Styles */
+@charset 'utf-8';
+@import "variables.scss";
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-Regular.eot");
+  src: url("./assets/fonts/NotoSans-Regular.ttf") format("truetype"),
+    url("./assets/fonts/NotoSans-Regular.eot?#iefix")
+      format("embedded-opentype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans thin";
+  src: url("./assets/fonts/NotoSans-Thin.eot");
+  src: url("./assets/fonts/NotoSans-Thin.ttf") format("truetype"),
+    url("./assets/fonts/NotoSans-Thin.eot") format("embedded-opentype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans light";
+  src: url("./assets/fonts/NotoSans-Light.eot");
+  src: url("./assets/fonts/NotoSans-Light.ttf") format("truetype"),
+    url("./assets/fonts/NotoSans-Light.eot?#iefix") format("embedded-opentype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans bold";
+  src: url("./assets/fonts/NotoSans-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+p {
+  margin: 0 0 10px;
+}
+html {
+  position: relative;
+}
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-family: "Noto Sans";
+  background-color: #e5e5e5;
+}
+.agt-container {
+  max-width: 100%;
+  margin-bottom: 88px;
+  padding-bottom: 1px;
+}
+.card-container {
+  position: relative;
+  max-width: 604px;
+  width: 100%;
+  margin: 52px auto 0;
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+.card-header {
+  height: 50px;
+  line-height: 50px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  background-color: white;
+  p {
+    margin: 0;
+  }
+}
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  top: 460px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #f1f7f9;
+  font-size: 14px;
+  text-align: center;
+  background-color: $cardFooterColor;
+  p {
+    margin: 0;
+  }
+  a {
+    color: $twoBlue;
+  }
+}
+.input-control {
+  position: relative;
+  top: -6px;
+  width: 100%;
+  height: 41px;
+  padding: 11px 16px;
+  border: 2px solid $inputBorderColor;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  font-size: 14px;
+  color: $text-clr-blck;
+  filter: none !important;
+  -webkit-appearance: none;
+  &:focus {
+    box-shadow: none;
+    // outline: 0;
+  }
+  &#password {
+    padding-right: 36px;
+  }
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: rgba(0, 0, 0) !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  background-color: transparent;
+  background-image: none;
+  transition: background-color 50000s ease-in-out 0s;
+}
+.control-label {
+  position: relative;
+  top: -6px;
+  left: 0px;
+  padding: 0 0;
+  line-height: 15px;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.4px;
+  font-size: 11px;
+  color: #000000;
+  background-color: #ffffff;
+}
+.form-error-msg {
+  position: absolute;
+  // bottom: -7px;
+  margin-top: 2px;
+  // left: 9px;
+  padding: 0 3px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 11px;
+  background-color: #fff;
+  color: $errormsg;
+}
+.error-msg {
+  background-color: #fff;
+  color: $errormsg;
+}
+
+.ng-invalid.ng-touched {
+  border-color: $errormsg;
+}
+.select-control.ng-invalid.ng-touched {
+  border-color: $errormsg;
+}
+.mb-4 {
+  position: relative;
+  height: 57px;
+  margin-bottom: 20px !important;
+}
+.sing-in,
+.agt-link {
+  color: $link;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.select-control {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 6px 12px;
+  border: 1px solid $inputBorderColor;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Noto Sans";
+  color: #495057;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.agt-btn {
+  width: 362px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 1px;
+  line-height: 19px;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  color: $btnTextColor;
+  /* text-transform: capitalize !important; */
+  cursor: pointer;
+  background-color: $btn;
+  display: inline-block;
+  &:hover {
+    color: #ffffff;
+    background-color: $btnhover;
+  }
+  &:active {
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.25);
+    background-color: $btnhover;
+  }
+  &:focus {
+    outline-width: 0;
+  }
+  &:disabled {
+    background-color: $btnLocked;
+    &:active {
+      box-shadow: none;
+    }
+  }
+  &.loading:after {
+    content: "Loading...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    font-family: "Noto Sans";
+    background-image: url(./assets//images/spinner.gif);
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: 34% center;
+    background-color: $btn;
+  }
+}
+
+.checkboxStyle {
+  margin-right: 12px;
+}
+select::-ms-expand {
+  display: none;
+}
+select,
+input,
+textarea,
+.icon-checkbox {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+    border-color: $inputFocusColor !important;
+  }
+}
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+input::-webkit-credentials-auto-fill-button,
+input::-webkit-contacts-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+.input-control {
+  &:focus {
+    box-shadow: none;
+  }
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #8a8787;
+    font-size: 15px;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #8a8787;
+    font-size: 15px;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #8a8787;
+    font-size: 15px;
+  }
+}
+.form-title {
+  color: #666666;
+  font-size: 14px;
+  font-weight: 600;
+}
+.form-prompt {
+  color: #8c8c8c;
+  font-size: 14px;
+}
+.msg-success {
+  // position: absolute;
+  font-family: "Noto Sans";
+  bottom: 38px;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  right: 0;
+  width: 362px;
+  margin-bottom: 11px;
+  color: $successTextColor;
+  margin: 0 -7px 11px;
+}
+.pwd-show,
+.pwd-hide {
+  position: absolute;
+  top: 63%;
+  right: 13px;
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  margin-top: -11px;
+  color: $pwdIconColor;
+  // background: url(./assets/images/agilent_pic.png) no-repeat;
+  background-size: 23px;
+  cursor: pointer;
+}
+.pwd-hide {
+  background-size: 296px;
+  background-position: -13px -72px;
+}
+.pwd-show {
+  background-size: 324px;
+  background-position: -15px -96px;
+}
+.eye-slash {
+  right: 14px;
+  font-family: "Noto Sans Bold";
+}
+.text-center {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: $text-clr-blck;
+  a {
+    color: $fiveBlue;
+  }
+}
+.page-title {
+  margin: 0;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 32px;
+  display: block;
+  text-align: center;
+  color: $fiveBlue;
+}
+// loading style
+.overlay-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #f5f5f5;
+  opacity: 0.8;
+}
+.loading-spinner {
+  position: relative;
+  top: 35%;
+  margin: 0 auto;
+  text-align: center;
+  p {
+    @media only screen and (device-width: 375px) and (device-height: 812px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 767px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+.validation-overlay p {
+  padding-top: 15px;
+  font-size: 13px;
+  color: #333333;
+}
+
+@media screen and (min-width: 318px) {
+  .msg-success {
+    width: 100%;
+    display: contents;
+    margin-bottom: 11px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .agt-container {
+    padding-right: 35px;
+    form {
+      margin: 0 12px;
+    }
+  }
+  // .agt-login-info {
+  //   margin-left: 128px !important;
+  // }
+  //  .agt-noaccess-info{
+  //   margin-left: 128px !important;
+  //  }
+}
+@media screen and (min-width: 413px) {
+  // .agt-login-info {
+  //   margin-left: 55px !important;
+  // }
+  // .agt-noaccess-info{
+  //   margin-left:145px !important;
+  // }
+}
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  // .agt-login-info {
+  //   margin-left: 6px !important;
+  // }
+  //  .agt-noaccess-info{
+  //   margin-left:146px !important;
+  //  }
+}
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  // .input-control {
+  //   width: 90%;
+  // }
+  // .agt-btn {
+  //   width: 92%;
+  // }
+  // .forgot-pass {
+  //   margin-left: 167px !important;
+  // }
+  // .agt-login-info {
+  //   margin-left: 1px !important;
+  // }
+  // .agt-noaccess-info {
+  //   margin-left: 1px !important;
+  // }
+}
+@media screen and (max-width: 370px) {
+  // .input-control {
+  //   width: 90%;
+  // }
+  // .agt-btn {
+  //   width: 92%;
+  // }
+  // .forgot-pass {
+  //   margin-left: 167px !important;
+  // }
+  // .agt-login-info {
+  //   margin-left: 1px !important;
+  // }
+  // .agt-noaccess-info {
+  //   margin-left: 47px !important;
+  // }
+}
+@media screen and (max-width: 767px) {
+  .agilent-logo {
+    display: block;
+    width: 200px;
+    margin: 0 auto 32px;
+  }
+  .agt-container {
+    padding: 0 15px 36px;
+    margin-bottom: 209px;
+    .card-container {
+      width: 100% !important;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0 !important;
+      form {
+        margin: 0 16px;
+      }
+      .cardTitle {
+        font-size: 16px !important;
+      }
+      .headerInfo {
+        font-size: 12px;
+      }
+    }
+  }
+  .c-link {
+    display: none;
+  }
+  .title-bg-color {
+    height: 44px;
+    line-height: 44px;
+  }
+  form .mb-4 {
+    margin-bottom: 19px !important;
+  }
+  .legal p:first-of-type {
+    margin: 0 auto 20px;
+  }
+  .rgt-right span {
+    display: block;
+    margin-bottom: 13px;
+    line-height: 17px;
+    &.vertical-line {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+    
+    "REGISTRATION": {
+        "PAGE_TITLE": "CrossLab Connect",
+        "ALREADYACCOUNT": "已经有一个帐号? ",
+        "SIGNIN": "登录",
+        "FIRSTNAME": "First Name (Required)",
+        "LASTNAME": "Last Name (Required)",
+        "EMAILADDRESS": "Email (Required)",
+        "PHONENUMBER": "Phone Number",
+        "COMPANY": "Company (Required)",
+        "COUNTRY": "Country (Required)",
+        "AGREE": "I agree to Agilent's ",
+        "TERMS": "Terms of User",
+        "INFO":"For full details of how we will treat your information view our ",
+        "POLICY":"privacy policy",
+        "CREATACCOUNT": "Create Account",
+        "PHONE_ERROR": "Please enter a valid phone number",
+        "VALIDATION_COMPANYEMAIL":"Company Email is required",
+        "FIELD_REQUIRED_VALIDATION_2":"Please enter a valid email",
+        "DESCRIPTIONONE": "Agilent and the institutions who use Agilent's CrossLab products ('the services') collect personal data from you in order to create a user account and to register you as an authorized user of the services provided by Agilent and the company.",
+        "DESCRIPTIONTWO": "When you register for an account on the Integrated Service Experience platform, you will also automativally be registered for an Agilent.com account in order to access this product. Automatic registration with the product and Agilent.com will allow users to view private agreements (e.g.,service contracts) and other personalized content on Agilent.com.",
+        "DESCRIPTIONTHREE": "To create an account, you must provide your email address(es) and country, as well as your name, phone number and billing address, if required.",
+        "DESCRIPTIONFOUR": "We will also collect and store details of your usage by collecting log files.",
+        "DESCRIPTIONFIVE": "agilent collects this personal data for the legitimate purpose of enabling the service and will share your data with the company whose data you access.",
+        "DESCRIPTIONSIX": "For further details on how we treat your personal data and how you can exprcise your privacy rights please view our privacy policy:https://www.agilent.com/home/privacy-policy."
+    },
+    "FOOTER": {
+        "ASSISTANCE": "For assistance, please ",
+        "SUPPORT": "contact support",
+        "CALL_US": " or call us at ",
+        "PHONE_NUMBER": "1-800-227-9770",
+        "AGILENT": "© 2019 Agilent Technologies, Inc.",
+        "OPENSOURCESOFTWARENOTICE": "Open Source Software Notice",
+        "STATEMENT": "Privacy Statement",
+        "TERMS": "使用条款"
+    }
+}

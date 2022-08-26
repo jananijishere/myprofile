@@ -1,0 +1,72 @@
+::ng-deep {
+  .atgHeader {
+    display: none;
+  }
+  .agt-container {
+    padding: 0;
+    min-height: 100vh;
+    margin-bottom: 0;
+  }
+  .agtFooterBlue {
+    background-color: #085391 !important;
+  }
+  .agt-footer-container {
+    background-color: #F7F7F7 !important;
+  }
+}
+.bg-color {
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 200px;
+  background-color: #0085d5;
+}
+.agt-logo {
+  width: 199px;
+  margin: 50px 88px 55px;
+}
+.container {
+  width: 100%;
+  height: 300px;
+  padding: 0 99px 0 88px;
+}
+.error-content {
+  width: 100%;
+  height: 100%;
+  padding: 60px 0 0 64px;
+  background-color: #ffffff;
+}
+p {
+  margin-bottom: 7px;
+  font-size: 14px;
+  line-height: 21px;
+}
+.error-title {
+  font-weight: 300;
+  font-size: 29px;
+  line-height: 39px;
+  margin-bottom: 16px;
+}
+.agtFooterBlue {
+  position: absolute;
+  bottom: 110px;
+  width: 100%;
+  height: 11px;
+  background-color: #085391;
+}
+@media screen and (max-width: 767px) {
+  .agt-logo{
+    width: 160px;
+    margin: 0;
+    padding: 50px 15px;
+  }
+  .container{
+    width: 100%;
+    padding: 0 15px 50px;
+  }
+  .error-content{
+    padding: 30px 15px;
+  }
+  .agtFooterBlue {
+    bottom: 209px;
+  }
+}

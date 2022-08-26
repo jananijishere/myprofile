@@ -1,0 +1,93 @@
+$btn: #0085d5;
+$link: #057fc8;
+$white: #ffffff;
+$twoBlue: #037cc2;
+$fiveBlue: #057fc8;
+$btnhover: #00426a;
+$errormsg: #d6001c;
+$btnLocked: #acddf6;
+$footerBgColor: #e5e5e5;
+$errorPgaefooterBgColor: #f7f7f7;
+$btnTextColor: #ffffff;
+$cardHeaderColor: #e8eef1;
+$cardFooterColor: rgba(247, 247, 247, 0.5);
+$inputBorderColor: #c1c6c8;
+$successTextColor: #008522;
+$successBorderColor: #008522;
+$warningBorderColor: #d6001c;
+$create-account-bg-clr: #f1f7f9;
+$warnig-bg-clr: #faf1f1;
+$success-bg-clr: #f1faf1;
+$text-clr-blck: #000000;
+$footer-txt-clr: #343740;
+$resend-txt-clr: #384350;
+$reset-brdr-clr: #e1e3e5;
+$resend-btn-bg-clr: #fafafa;
+$pwdIconColor: #888b8d;
+$inputFocusColor: #0085d5;
+$black-color: #000000;
+$profile-label-grey: #57595b;
+$border-color: #d0d0ce;
+$light-grey: #d5d8db;
+$profile-label-grey: #57595b;
+$blue-color: #0085d5;
+$dark-blue: #006eb3;
+$light-grey-color: #edf0f2;
+$darker-blue: #00588f;
+$white-color: #ffffff;
+$lighter-blue: #ebf5fa;
+$error-red-color: #d6091b;
+$grey1: #f8f8f8;
+$ice-blue: #f2f8fa;
+$grey: #b7b9bc;
+$extra-dark-grey: #535557;
+$dark-grey: #87898c;
+$primary-btn-hover-background: #00426a;
+$yellow-color: #f2a900;
+
+$roboto-light: "Roboto Light", Arial, Helvetica, Sans-Serif;
+$roboto-bold: "Roboto Bold", Arial, Helvetica, Sans-Serif;
+$roboto-regular: "Roboto Regular", Arial, Helvetica, Sans-Serif;
+$roboto-medium: "Roboto Medium", Arial, Helvetica, Sans-Serif;
+$roboto-condensed-light: "Roboto Condensed Light", Arial, Helvetica, Sans-Serif;
+$roboto-condensed-regular: "Roboto Condensed Regular", Arial, Helvetica,
+  Sans-Serif;
+$roboto-condensed-bold: "Roboto Condensed Bold", Arial, Helvetica, Sans-Serif;
+$roboto-italic: "Roboto Italic", Arial, Helvetica, Sans-Serif;
+$tile-background-color: " #E7EFF5";
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/assets/fonts/woff/Roboto-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("/assets/fonts/woff/Roboto-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("/assets/fonts/woff/Roboto-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("/assets/fonts/woff/Roboto-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Condensed Light";
+  src: url("/assets/fonts/woff/RobotoCondensed-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Condensed Regular";
+  src: url("/assets/fonts/woff/RobotoCondensed-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Italic";
+  src: url("/assets/fonts/woff/Roboto-Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto Condensed Bold";
+  src: url("/assets/fonts/woff/RobotoCondensed-Bold.woff") format("woff");
+}

@@ -1,0 +1,32 @@
+<mat-form-field appearance="outline" class="full-width">
+    <label class="select-label" [ngClass]="{ 'select-labe-disabled': isDisabled }">{{ label }}</label>
+    <input
+      matInput
+      [placeholder]="placeholder"
+      [formControl]="control"
+      [type]="type"
+      [attr.maxlength]="maxlength"
+      (blur)="onTouched()"
+      (keypress)="checkInput($event)"
+      [readonly]="readonly"
+      [ngModel]="value"
+      (ngModelChange)="value = $event; onChange($event)"
+      [maxlength]="maxlength"
+    />
+    <mat-hint align="start">{{ hint }}</mat-hint>
+    <!-- <mat-error *ngIf="control?.invalid && (control?.dirty || control?.touched)">
+      <span *ngIf="control.errors.required">This Field is required</span>
+      <span *ngIf="control.errors.invalidEmail">Invalid Email</span>
+    </mat-error> -->
+    <!-- -------------------- -->
+    <mat-error *ngIf="control?.invalid && (control?.dirty || control?.touched)">
+      <ng-container *ngFor="let error of errorMessages">
+        <span *ngFor="let item of error | keyvalue">
+          <span *ngIf="control?.hasError(item.key)">
+            {{ item.value }}
+          </span>
+        </span>
+      </ng-container>
+    </mat-error>
+  </mat-form-field>
+  

@@ -1,0 +1,225 @@
+@import "../../../variables.scss";
+
+.atgHeader {
+  padding: 22px;
+  width: 100%;
+  height: 99px;
+  vertical-align: middle;
+  background-color: #0085d5;
+  img {
+    width: 255px;
+    height: 55px;
+    margin: 22px;
+  }
+  a.logo {
+    display: block;
+    width: 255px;
+    height: 55px;
+    margin-left: 22px;
+    float: left;
+  }
+  .bgImg {
+    width: 255px;
+    height: 55px;
+    background: url(../../../assets/images/agilent_pic.png) no-repeat;
+    background-size: 280px;
+  }
+  .signoutButton {
+    float: right;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid;
+    margin-right: 22px;
+    padding: 8px;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+  .signOutEnter {
+    float: left;
+  }
+}
+.myprofile-header {
+  padding: 22px;
+  width: 100%;
+  height: 99px;
+  vertical-align: middle;
+  background-color: #fff;
+  position: fixed;
+  margin-top: -15px img {
+    width: 255px;
+    height: 55px;
+    margin: 22px;
+  }
+  a.logo {
+    display: block;
+    width: 255px;
+    height: 55px;
+    margin-left: 22px;
+    float: left;
+  }
+  .bgImg {
+    width: 152px;
+    height: 42px;
+    background: url(../../../assets/images/agilent_form_logo.png) no-repeat;
+    background-size: 117px;
+    margin-left: -16px;
+  }
+  .signoutButton {
+    float: right;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid;
+    margin-right: 22px;
+    padding: 8px;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+  .signOutEnter {
+    float: left;
+  }
+}
+@media screen and (max-width: 767px) {
+  .atgHeader {
+    height: 50px;
+    padding: 5px;
+    .bgImg {
+      width: auto;
+      height: 40px;
+      background-size: 200px;
+    }
+  }
+}
+.username-icon {
+  // cursor: pointer;
+  // display: inline;
+  // padding: 4px 5px 4px 5px;
+  // background-color: #0085d5;
+  // color: #fff;
+  // /* border: 5px solid #0085d5; */
+  // font-size: 14px;
+  // font-family: $roboto-medium;
+  // line-height: normal;
+  // border-radius: 50%;
+  // height: 29px;
+  // width: 29px;
+  // position: relative;
+  // right: 5px;
+  cursor: pointer;
+  display: inline;
+  padding: 4px 5px 4px 5px;
+  position: relative;
+  right: 5px;
+  display: inline;
+  height: 29px;
+  width: 29px;
+  border-radius: 45px;
+  background-color: #0085d5;
+  color: #fff;
+  /* border: 3px solid #fff; */
+  font-size: 12px;
+  font-family: $roboto-medium;
+  line-height: normal;
+}
+.username-btn {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  font-size: 17px;
+  border: none;
+  background-color: fff;
+  color: #0085d5;
+  font-family: $roboto-medium;
+  line-height: 18px;
+  float: right;
+  bottom: 38px;
+  &:hover:focus {
+    outline: none;
+  }
+}
+.drop-down-arrow {
+  cursor: pointer;
+  margin-right: 50px;
+  font-family: "FontAwesome";
+  font-size: 16px;
+  color: #fff;
+  float: right;
+  position: relative;
+  left: 172px;
+  bottom: 38px;
+}
+.menu-item {
+  color: #0085d5;
+  font-size: 16px;
+  &:hover {
+    color: #0085d5;
+  }
+}
+.menu-dropdown-icon {
+  color: black;
+  position: relative;
+  left: 8px;
+  bottom: 3px;
+}
+.dropdown {
+  display: inline-block;
+  float: right;
+  padding: 0px 10px;
+  color: #fff;
+  // margin-right: 20px;
+  margin-top: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ebf5fa;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+.profile-para {
+  float: left;
+}
+.showMyProfile {
+  display: inline-block;
+}
+.user-name {
+  display: inline;
+  position: relative;
+  font-size: 14px;
+  border: none;
+  background-color: #fff;
+  margin-left: 3px;
+  color: #000;
+  padding: unset;
+  font-family: $roboto-medium;
+  line-height: 16px;
+  font-weight: 700;
+}
+.signout-icon {
+  color: gray;
+  margin-right: 10px;
+  font-size: 18px;
+  &:hover {
+    color: #0085d5;
+  }
+}

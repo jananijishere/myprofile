@@ -1,0 +1,47 @@
+<mat-nav-list>
+  
+    <mat-list-item id="close-mobilemenu-myaccount">
+      <div class="close-icon-mobile">
+       
+      </div>
+    </mat-list-item>
+    <mat-list-item
+    routerLinkActive="active"
+    routerLink="/myprofile"
+      class="profile"
+    >
+    <span 
+    ><i class="fa fa-user-circle list-item"></i
+  ></span>
+
+      <div class="sidenav-item">
+        <h5 class="list-content font-active">
+          {{ 'LOGIN.PROFILE' | translate }}
+         
+        </h5>
+      </div>
+    </mat-list-item>
+  
+    <mat-list-item 
+     routerLink="/forgot-password" 
+      class="security"
+    >
+      <span >
+        <i class="fa fa-key list-item"></i>
+      </span>
+      <!-- <span *ngIf="password.isActive">
+        <i class="fa fa-key list-item"></i>
+      </span> -->
+      <div class="sidenav-item">
+        <h5 class="list-content font-active">
+          
+          {{ 'LOGIN.MANAGEPASSWORD' | translate }}
+         
+        </h5>
+      </div>
+    </mat-list-item>
+    <!-- ------------------------------------------------- -->
+
+    <!-- --------------------------------------------- -->
+  </mat-nav-list>
+  

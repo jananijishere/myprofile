@@ -1,0 +1,21 @@
+<div class="atgHeader" *ngIf="!showMyProfile">
+    <a href="{{homeURL}}" target="_self" class="logo" [ngClass]="{ 'signOutEnter': showSignOutButton }">
+        <!-- <img src="assets/images/agilent_header_logo.png" alt="Agilent Technologies testAgilent"> -->
+        <div class="bgImg"></div>
+    </a>
+  
+    
+    <button *ngIf="showSignOutButton" class="signoutButton" routerLink="signout" [queryParams]="{aid: aId}">{{ 'COMMON.SIGNOUT' | translate}}</button>
+</div>
+<div class="myprofile-header" *ngIf="showMyProfile">
+    <a href="{{homeURL}}" target="_self" class="logo" [ngClass]="{ 'signOutEnter': showSignOutButton }">
+        <!-- <img src="assets/images/agilent_header_logo.png" alt="Agilent Technologies testAgilent"> -->
+        <div class="bgImg"></div>
+    </a>
+    <div *ngIf="showMyProfile" class="dropdown profile-name">
+        <p ><span class="username-icon">{{initialName | uppercase}}</span><span class="user-name">{{firstName}} {{lastName}}</span><span class="menu-dropdown-icon"><i class="fa fa-sort-down"></i></span></p>
+      <div class="dropdown-content">
+          <a href="/signout"><i class="fa fa-sign-out align signout-icon"></i><span class="menu-item">{{ 'COMMON.SIGNOUT' | translate}}</span></a>
+      </div>
+    </div>
+</div>

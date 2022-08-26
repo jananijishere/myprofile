@@ -1,0 +1,296 @@
+@import "../../../variables.scss";
+.card-container {
+  padding-top: 56px;
+  margin-bottom: 57px;
+  min-height: 516px;
+  height: auto;
+  max-height: 516px;
+  &.main-card-cntnr {
+    min-height: 464px;
+  }
+  form {
+    width: 362px;
+    margin: 0 auto;
+    padding-bottom: 56px;
+    .button-align {
+      position: relative;
+      top: -22px;
+    }
+    input {
+      filter: none !important;
+    }
+  }
+  .card-footer {
+    background: $create-account-bg-clr;
+  }
+}
+.card-container.login {
+  .success-box.existing-user {
+    height: auto;
+  }
+  form.existing-user {
+    padding-bottom: 0px;
+  }
+}
+.mb-4 {
+  margin-bottom: 24px !important;
+}
+.warning-box {
+  position: relative;
+  //min-height: 48px;
+  margin: 16px auto 17px auto;
+  font-family: "Noto Sans";
+  width: 362px;
+  height: 74px;
+  padding: 14px 29px;
+  border: 2px solid $warningBorderColor;
+  background: $warnig-bg-clr;
+  //border-radius: px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: $warningBorderColor;
+  filter: none !important;
+  -webkit-appearance: none;
+}
+
+.form-error-msg {
+  display: none;
+}
+.error-style {
+  position: relative;
+  top: -8px;
+  padding: 0;
+}
+.ng-invalid.ng-touched {
+  border-color: $inputBorderColor;
+}
+.showError {
+  .form-error-msg {
+    display: block;
+  }
+  .ng-invalid.ng-touched {
+    border-color: $errormsg;
+  }
+}
+.warning-box.resent-msg {
+  padding: 5px 29px !important;
+  // margin: 16px auto 0px auto !important;
+}
+.warning-box.succss-resend {
+  margin: 16px auto 5px auto !important;
+}
+.btn-create-acc {
+  border: 0;
+  color: $fiveBlue;
+  padding-left: 0px;
+  padding-right: 0px;
+  line-height: 21px;
+  &:active {
+    box-shadow: none;
+  }
+}
+.forgot-pass {
+  position: relative;
+  top: -19px;
+  width: 100%;
+  // margin-top: 16px; margin-top: -14px;
+  margin-bottom: 36px;
+  text-align: right;
+  line-height: 17px;
+  a {
+    font-family: "Noto Sans";
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: $fiveBlue;
+  }
+}
+.agt-login-info {
+  margin: 24px 0 41px;
+  text-align: center;
+  display: block !important;
+  p {
+    margin-bottom: 0px;
+    color: #000000 !important;
+  }
+}
+.verification-email {
+  color: blue($color: #000000) !important;
+}
+.login-error-info {
+  margin: auto;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: $errormsg;
+  p {
+    margin-bottom: 0;
+  }
+}
+.expired-info {
+  margin: 13px 0 40px;
+}
+.agt-btn:disabled {
+  background-color: $btnLocked;
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.success-msg-pwd,
+.success-msg {
+  color: $successTextColor;
+}
+
+.success-box {
+  border: 2px solid $successBorderColor;
+  background-color: $success-bg-clr;
+}
+
+@media screen and (max-width: 450px) {
+  .agt-btn {
+    width: 100%;
+  }
+  .card-container form {
+    width: 90%;
+  }
+  .warning-box {
+    width: 90%;
+  }
+}
+.passwordShow {
+  display: none;
+}
+@media screen and (max-width: 580px) {
+  .login-error-info,
+  .agt-btn {
+    width: 100%;
+  }
+  .agt-login-info {
+    p {
+      font-size: 11px;
+    }
+  }
+}
+/* Added for RWD */
+@media screen and (max-width: 767px) {
+  .login-error-info {
+    font-size: 12px;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) {
+  .login-error-info {
+    font-size: 12px;
+  }
+  .agt-container .warning-box {
+    width: 320px !important;
+    padding: 10px 10px;
+  }
+  .agt-container .card-container form {
+    width: 90%;
+  }
+  .agt-container .agt-btn {
+    width: 90%;
+  }
+}
+.showLink {
+  // height: 80px;
+  // padding: 10px 29px;
+  color: #057fc8;
+  text-decoration: underline;
+}
+.resend-msg-success {
+  color: $successTextColor !important;
+  font-size: 13px !important;
+  margin-top: 0px !important;
+  margin-left: 28% !important;
+}
+.german-css {
+  margin-left: 15% !important;
+}
+.italy-css {
+  margin-left: 21% !important;
+}
+.franch-css {
+  margin-left: 22% !important;
+}
+.spain-css {
+  margin-left: 15% !important;
+}
+.japan-css {
+  margin-left: 36% !important;
+}
+.portugal-css {
+  margin-left: 25% !important;
+}
+.german-css-warning-box {
+  position: relative;
+  top: 11px;
+}
+.china-css-warning-box {
+  position: relative;
+  top: 11px;
+}
+.korea-css-warning-box {
+  position: relative;
+  top: 11px;
+}
+.italy-css-warning-box {
+  position: relative;
+  top: 11px;
+}
+.franch-css-warning-box {
+  position: relative;
+  top: 11px;
+}
+.spain-css-warning-box {
+  position: relative;
+  top: 11px;
+}
+.japan-css-warning-box {
+  position: relative;
+  top: 11px;
+}
+.portugal-css-warning-box {
+  position: relative;
+  top: 11px;
+}
+.text-remember-me {
+  position: relative;
+  bottom: 31px;
+  left: 24px;
+  font-size: 11px;
+}
+.checkbox-remember-me {
+  position: relative;
+  bottom: 35px;
+}
+.moveRememberMe {
+  position: relative;
+  top: 13px;
+}
+.card-container-email-verification {
+  min-height: 400px;
+}
+.text-center-firstline {
+  position: relative;
+  top: 58px;
+}
+.text-center-thirdline {
+  position: relative;
+  bottom: -70px;
+}
+.spain-heading {
+  line-height: 49px;
+}
+.german-text {
+  padding-left: 4px !important;
+}
+.france-text {
+  margin-top: 16px !important;
+}
+.delocale-class {
+  position: relative;
+  bottom: 9px;
+}

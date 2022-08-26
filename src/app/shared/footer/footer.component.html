@@ -1,0 +1,64 @@
+<div class="agt-footer-container">
+  <div class="agt-footer">
+    <div class="legal">
+      
+      <p *ngIf='publicService.appInfo?.showContactSupportAndOSSNotice'>
+        <span>{{ 'FOOTER.ASSISTANCE' | translate }}</span>
+        <a
+          class="agt-link"
+          href="{{ publicService.appInfo?.contactSupportURL }}"
+          rel="noopener noreferrer"
+          >{{ 'FOOTER.SUPPORT' | translate }}</a
+        >
+        <br class="br-isShow" />
+        <span style="display: none;">{{ 'FOOTER.CALL_US' | translate }}</span>
+        <a
+          href="tel:{{ publicService.appInfo?.customerSupportTel }}"
+          style="display: none;"
+          class="ise-phone"
+          >{{ publicService.appInfo?.customerSupportNumber }}</a
+        >
+      </p>
+      <p class="rgt-right">
+        <span
+          >© {{ 'FOOTER.AGILENT' | translate }}
+          {{ getYear(Datetime) | date: 'yyyy' }}</span
+        >
+        <span class="vertical-line">|</span>
+
+        <ng-container *ngIf='publicService.appInfo?.showContactSupportAndOSSNotice'>
+          <span>
+            <a
+              class="agt-link"
+              href="{{ publicService.appInfo?.openSourceSoftwareNotice }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ 'FOOTER.OPENSOURCESOFTWARENOTICE' | translate }}</a
+            >
+          </span>
+          
+        <span class="vertical-line">|</span>
+        </ng-container>       
+        <span>
+          <a
+            class="agt-link"
+            href="{{ publicService.appInfo?.privacyStatementURL }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ 'FOOTER.STATEMENT' | translate }}</a
+          >
+        </span>
+        <span class="vertical-line">|</span>
+        <span>
+          <a
+            class="agt-link"
+            href="{{ publicService.appInfo?.termsOfUseURL }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ 'FOOTER.TERMS' | translate }}</a
+          >
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
